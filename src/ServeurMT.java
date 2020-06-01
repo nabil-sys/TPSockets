@@ -48,6 +48,7 @@ public class ServeurMT extends Thread {
 
                  while (true){
                      String req = br.readLine();
+                     System.out.println(IP+"a envoyé:"+req);
                      if(req!=null){
                          String rep = "Size="+req.length();
                          pw.println(rep);
