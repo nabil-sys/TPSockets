@@ -47,15 +47,12 @@ public class ServeurMT extends Thread {
                  pw.println("Bienvenue, vous êtes le client numéro"+numeroClients);
 
                  while (true){
-                     String req = br.readLine();
-                     System.out.println(IP+"a envoyé:"+req);
-                     if(req!=null){
+                     String req;
+                     while((req=br.readLine())!=null){
+                         System.out.println(IP+"a envoyé:"+req);
                          String rep = "Size="+req.length();
                          pw.println(rep);
-
                      }
-
-
                  }
 
              } catch (Exception e) {
