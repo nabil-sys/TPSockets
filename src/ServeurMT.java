@@ -49,7 +49,7 @@ public class ServeurMT extends Thread {
 
                  System.out.println("Connexion du client numero"+numeroClients+"IP="+IP);
                  pw.println("Bienvenue, vous êtes le client numéro"+numeroClients);
-                 pw.println("Devinez le nombre secret entre 0 et 1000")
+                 pw.println("Devinez le nombre secret entre 0 et 1000");
 
                  while (true){
                      String req;
@@ -58,15 +58,15 @@ public class ServeurMT extends Thread {
                          int nb=Integer.parseInt(req);
                          if(fin==false){
                              if(nb<nombreSecret){
-                                 pw.println("votre nombre est plus petit")
+                                 pw.println("votre nombre est plus petit");
                              }
                              else if(nb>nombreSecret){
-                                 pw.println("votre nombre est plus grand")
+                                 pw.println("votre nombre est plus grand");
                              }
                              else{
                                  gagnant = IP;
                                  fin = true;
-                                 pw.println("Bravo, vous avez gagné...")
+                                 pw.println("Bravo, vous avez gagné...");
                              }
                          }else{
                              pw.println("Le jeu est terminé, le gagnant est :"+gagnant);
